@@ -1,9 +1,12 @@
+import {useEffect} from 'react'
 import Paciente from "./Paciente"
 
 const ListadoPacientes = ( {pacientes, setPaciente, eliminarPaciente} ) => {
 
   return (
-    <div className="md:w-1/2 lg:w-3/5 md:h-screen overflow-y-scroll">
+    <div className={pacientes.length > 2 ? 
+    "md:w-1/2 lg:w-3/5 md:h-screen overflow-y-scroll" :
+    "md:w-1/2 lg:w-3/5 md:h-screen"}>
 
       {pacientes && pacientes.length ? (
         <>
